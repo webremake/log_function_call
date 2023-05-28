@@ -7,7 +7,8 @@ import re
 
 
 def humanify(name: str):
-    return ' '.join(re.split('_+', name))
+    words = re.split('_+', name)
+    return ' '.join(words).capitalize()
 
 
 def step(fn):
